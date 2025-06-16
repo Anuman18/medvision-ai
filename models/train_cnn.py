@@ -1,15 +1,21 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torchvision import models, transforms
 from torch.utils.data import DataLoader
 from utils.dataloader import ChestXrayDataset
+
 from tqdm import tqdm
 import os
 
 # Paths
-CSV_PATH = "../data/chest_xrays/Data_Entry_2017.csv"
-IMG_DIR = "../data/chest_xrays/images/"
+CSV_PATH = "D:\medvision-ai\data\chest_xrays\Data_Entry_2017.csv"
+IMG_DIR = "D:\medvision-ai\data\chest_xrays\images"
 SAVE_PATH = "models/densenet_xray.pth"
 
 # Device
@@ -51,6 +57,7 @@ for epoch in range(5):
         running_loss += loss.item()
 
     print(f"Epoch {epoch+1}/5 - Loss: {running_loss:.4f}")
+    
 
 # Save the model
 os.makedirs("models", exist_ok=True)

@@ -9,6 +9,6 @@ gr.Interface(
     fn=analyze,
     inputs=gr.Image(type="filepath"),
     outputs=["text", "text"],
-    title="🩻 MedVision AI",
+    title=" MedVision AI",
     description="Upload a chest X-ray to generate a medical report."
 ).launch()
