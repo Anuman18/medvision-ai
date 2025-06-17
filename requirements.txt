@@ -5,3 +5,6 @@
  scikit-learn 
  matplotlib 
  tqdm
+ transformers
+ gradio
+ pillow
