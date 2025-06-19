@@ -7,7 +7,7 @@ from models.report_generator import ReportGenerator
 from fpdf import FPDF
 import uuid
 
-model_path = "cnn_model.pth"
+model_path = "D:\\medvision-ai\\models\\cnn_model.pth"
 generator = ReportGenerator()
 
 def analyze_xray(image):
